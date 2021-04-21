@@ -1,17 +1,13 @@
-# Template Python on Docker
+# Use json in Python
 
-## 使い方
+Pythonでjsonを扱う。
 
-1. Dockerfileのimageを変更する。
-2. 必要に応じてDockerfileにpipを書く。
-3. 必要に応じてdocker-compose.ymlを修正する。
-4. 下記実行。
-    ``` sh
-    docker-compose build
-    docker-compose up
-    ```
+## ファイル確認
+
+``` sh
+cat app/input/comments_PbONx9_umgE_20210421_184211.json | jq '.' -C | less -R
+```
 
 ## 参考
 
-- [Qiita:Docker を使う（python のイメージで色々確認してみる）](https://qiita.com/landwarrior/items/fd918da9ebae20486b81)
-- [Future Tech Blog:仕事でPythonコンテナをデプロイする人向けのDockerfile (1): オールマイティ編](https://future-architect.github.io/articles/20200513/)
+- [PythonでJSON 読み込み:Qiita](https://qiita.com/kikuchiTakuya/items/53990fca06fb9ba1d8a7)
