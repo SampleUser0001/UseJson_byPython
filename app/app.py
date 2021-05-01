@@ -4,9 +4,9 @@ import json
 # サンプルのjsonファイルパス
 JSON_FILE_PATH = './input/comments_PbONx9_umgE_20210421_184211.json'
 
-JSON_KEY = ['kind','etag',]
+JSON_KEY = ['kind','etag']
 
-with open(JSON_FILE_PATH, mode='r', ) as f:
+with open(JSON_FILE_PATH, mode='r') as f:
     comments = json.load(f)
     # マップみたいなもんだと思えばいいっぽい。
     print(comments['pollingIntervalMillis'])
